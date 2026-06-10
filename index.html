@@ -373,6 +373,36 @@ footer{
   .stat{
     border-right:none;
   }
+  .menu-btn{
+  display:none;
+}
+
+@media(max-width:800px){
+
+  .menu-btn{
+    display:block;
+    background:#064635;
+    color:white;
+    border:none;
+    font-size:28px;
+    padding:6px 12px;
+    border-radius:8px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  nav.active{
+    display:block;
+  }
+
+  nav a{
+    display:block;
+    padding:12px;
+    text-align:center;
+  }
+}
 }
 </style>
 </head>
@@ -392,15 +422,15 @@ footer{
       <span>EDUCATIONAL TRUST</span>
     </div>
   </div>
-
-  <nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="navMenu">
     <a href="#home">Home</a>
     <a href="#about">About Us</a>
     <a href="#services">Services</a>
     <a href="#activities">Activities</a>
     <a href="#apply">Apply Job</a>
     <a href="#contact">Contact</a>
-  </nav>
+  </nav id="navMenu">
 </header>
 
 <section class="hero" id="home">
@@ -658,6 +688,10 @@ function submitForm(event){
   event.target.reset();
 }
 </script>
-
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
