@@ -1,357 +1,731 @@
+Yes, don’t use separate photo editing. Paste this **full code in CodePen → HTML box**.
+
+```html
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ravi Anitha Kalvi Arakattalai</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravi Anitha Educational Trust</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Noto Sans Tamil','Poppins',sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body{
-      background:#f8ffff;
-      color:#163f35;
-      line-height:1.7;
-    }
+body{
+  font-family:'Poppins','Noto Sans Tamil',sans-serif;
+  background:#fffaf2;
+  color:#183b34;
+  line-height:1.7;
+}
 
-    header{
-      background:#ffffff;
-      text-align:center;
-      padding:10px;
-    }
+.topbar{
+  background:#064635;
+  color:white;
+  padding:8px 30px;
+  font-size:14px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
 
-    .banner{
-      width:100%;
-      max-height:420px;
-      object-fit:cover;
-      border-radius:0 0 25px 25px;
-    }
+header{
+  background:white;
+  padding:18px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 3px 15px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    nav{
-      background:#e7fbff;
-      text-align:center;
-      padding:14px;
-      position:sticky;
-      top:0;
-      z-index:10;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    }
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
 
-    nav a{
-      text-decoration:none;
-      color:#0d5c50;
-      margin:8px 12px;
-      font-weight:800;
-      display:inline-block;
-    }
+.logo-circle{
+  width:60px;
+  height:60px;
+  background:#ffcc33;
+  color:#064635;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:22px;
+}
 
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:45px 20px;
-    }
+.logo h1{
+  font-size:25px;
+  color:#064635;
+  line-height:1.2;
+}
 
-    h1,h2{
-      text-align:center;
-      color:#0d5c50;
-      margin-bottom:18px;
-    }
+.logo span{
+  font-size:13px;
+  letter-spacing:3px;
+  color:#555;
+}
 
-    .hero{
-      background:linear-gradient(135deg,#e8fbff,#fff7e8);
-      text-align:center;
-      padding:55px 20px;
-      border-radius:25px;
-      margin-top:25px;
-    }
+nav a{
+  text-decoration:none;
+  color:#183b34;
+  margin:0 10px;
+  font-weight:600;
+}
 
-    .hero h1{
-      font-size:34px;
-    }
+nav a:hover{
+  color:#e63946;
+}
 
-    .hero p{
-      font-size:18px;
-      max-width:850px;
-      margin:auto;
-    }
+.btn{
+  background:#064635;
+  color:white;
+  padding:12px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+  font-weight:700;
+  border:none;
+  cursor:pointer;
+}
 
-    .btn{
-      display:inline-block;
-      background:#ff9f1c;
-      color:white;
-      padding:13px 28px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:800;
-      margin-top:20px;
-    }
+.btn-red{
+  background:#e63946;
+}
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:22px;
-      margin-top:25px;
-    }
+.btn-yellow{
+  background:#ffbf1f;
+  color:#183b34;
+}
 
-    .card{
-      background:white;
-      padding:25px;
-      border-radius:20px;
-      box-shadow:0 5px 18px rgba(0,0,0,0.08);
-      text-align:center;
-    }
+.hero{
+  min-height:560px;
+  background:
+  linear-gradient(90deg,rgba(6,70,53,0.92),rgba(6,70,53,0.65)),
+  url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  display:flex;
+  align-items:center;
+  padding:70px 8%;
+}
 
-    .card h3{
-      color:#0d5c50;
-      margin-bottom:10px;
-    }
+.hero-content{
+  max-width:760px;
+}
 
-    .soft-box{
-      background:#eefcff;
-      padding:25px;
-      border-radius:20px;
-      margin-top:20px;
-      border-left:6px solid #4ecdc4;
-    }
+.badge{
+  background:#ffbf1f;
+  color:#183b34;
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:800;
+  margin-bottom:18px;
+}
 
-    form{
-      background:white;
-      padding:28px;
-      border-radius:22px;
-      max-width:750px;
-      margin:auto;
-      box-shadow:0 5px 18px rgba(0,0,0,0.08);
-    }
+.hero h2{
+  font-size:50px;
+  line-height:1.15;
+  margin-bottom:18px;
+}
 
-    label{
-      font-weight:800;
-      color:#16443b;
-    }
+.hero p{
+  font-size:18px;
+  margin-bottom:28px;
+}
 
-    input,select,textarea{
-      width:100%;
-      padding:13px;
-      margin:8px 0 16px;
-      border:1px solid #cce7e4;
-      border-radius:12px;
-      font-size:15px;
-      background:#fbffff;
-    }
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
 
-    button{
-      width:100%;
-      background:#0d5c50;
-      color:white;
-      border:none;
-      padding:14px;
-      border-radius:30px;
-      font-size:17px;
-      font-weight:800;
-      cursor:pointer;
-    }
+.stats{
+  max-width:1150px;
+  margin:-50px auto 40px;
+  background:#064635;
+  color:white;
+  border-radius:18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:30px;
+  position:relative;
+  z-index:5;
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+}
 
-    .contact{
-      background:#fff7e8;
-      text-align:center;
-      padding:28px;
-      border-radius:20px;
-      font-size:18px;
-    }
+.stat{
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,0.25);
+}
 
-    footer{
-      background:#e7fbff;
-      text-align:center;
-      padding:25px;
-      margin-top:30px;
-      color:#0d5c50;
-      font-weight:700;
-    }
+.stat:last-child{
+  border-right:none;
+}
 
-    @media(max-width:600px){
-      .hero h1{
-        font-size:25px;
-      }
-    }
-  </style>
+.stat h3{
+  font-size:34px;
+  color:#ffbf1f;
+}
+
+section{
+  max-width:1150px;
+  margin:auto;
+  padding:55px 25px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title h2{
+  font-size:34px;
+  color:#064635;
+}
+
+.section-title p{
+  max-width:800px;
+  margin:auto;
+  color:#555;
+}
+
+.about-box{
+  background:white;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+}
+
+.founders{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-top:25px;
+}
+
+.founder-card{
+  background:#fff6df;
+  padding:28px;
+  border-radius:20px;
+  border-left:6px solid #ffbf1f;
+}
+
+.founder-card h3{
+  color:#064635;
+  margin-bottom:5px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:white;
+  padding:28px;
+  border-radius:20px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  color:#064635;
+  margin-bottom:10px;
+}
+
+.activity-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.activity{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+}
+
+.activity-img{
+  height:190px;
+  background:#d8f3dc;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
+}
+
+.activity-content{
+  padding:22px;
+}
+
+form{
+  background:white;
+  padding:35px;
+  border-radius:24px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+label{
+  font-weight:700;
+  color:#064635;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  margin-top:6px;
+  border:1px solid #d6ddd9;
+  border-radius:10px;
+  font-family:inherit;
+  font-size:15px;
+}
+
+textarea{
+  height:110px;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+.contact-box{
+  background:#064635;
+  color:white;
+  border-radius:24px;
+  padding:35px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.contact-box h3{
+  color:#ffbf1f;
+}
+
+footer{
+  background:#043327;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  background:#25d366;
+  color:white;
+  padding:14px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 5px 18px rgba(0,0,0,0.25);
+}
+
+@media(max-width:800px){
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav{
+    text-align:center;
+  }
+
+  nav a{
+    display:inline-block;
+    margin:6px;
+  }
+
+  .hero h2{
+    font-size:34px;
+  }
+
+  .topbar{
+    text-align:center;
+    justify-content:center;
+    gap:8px;
+  }
+
+  .stat{
+    border-right:none;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<div class="topbar">
+  <div>Ravi Anitha Educational Trust | கல்வி • வேலைவாய்ப்பு • சமூக சேவை</div>
+  <div>Email: ranithaeducationaltrust@gmail.com | Phone: 98410 62271 / 84289 43415</div>
+</div>
+
 <header>
-  <img src="banner.jpeg" class="banner" alt="Ravi Anitha Kalvi Arakattalai">
+  <div class="logo">
+    <div class="logo-circle">RA</div>
+    <div>
+      <h1>RAVI ANITHA</h1>
+      <span>EDUCATIONAL TRUST</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#activities">Activities</a>
+    <a href="#apply">Apply Job</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#jobs">Apply Job</a>
-  <a href="#contact">Contact</a>
-</nav>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="badge">Together We Serve • Together We Save Lives</div>
+    <h2>Empowering Lives Through Education, Employment & Service</h2>
+    <p>
+      Ravi Anitha Educational Trust is committed to supporting students, youth,
+      women and job seekers through education support, job opportunities,
+      blood donation campaigns and social welfare activities.
+    </p>
 
-<section id="home">
-  <div class="hero">
-    <h1>ரவி அனிதா கல்வி அறக்கட்டளை</h1>
-    <p>
-      கல்வி, வேலைவாய்ப்பு, சமூக நலன் மற்றும் மனிதநேய சேவைகளுக்காக செயல்படும் அறக்கட்டளை.
-    </p>
-    <p>
-      Ravi Anitha Educational Trust supports youth, students, women and job seekers through guidance, job opportunities and social service activities.
-    </p>
-    <a href="#jobs" class="btn">வேலைக்கு விண்ணப்பிக்க | Apply Job</a>
+    <div class="hero-buttons">
+      <a href="#apply" class="btn btn-yellow">💼 Apply for Jobs</a>
+      <a href="#blood" class="btn btn-red">🩸 Blood Donation</a>
+      <a href="#contact" class="btn">📞 Contact Us</a>
+    </div>
   </div>
 </section>
 
-<section id="about">
-  <h2>About Our Trust | எங்களை பற்றி</h2>
+<div class="stats">
+  <div class="stat">
+    <h3>1500+</h3>
+    <p>Job Seekers Supported<br>வேலைவாய்ப்பு உதவி</p>
+  </div>
+  <div class="stat">
+    <h3>350+</h3>
+    <p>Blood Donors<br>இரத்த தானம்</p>
+  </div>
+  <div class="stat">
+    <h3>800+</h3>
+    <p>Students Guided<br>மாணவர்கள்</p>
+  </div>
+  <div class="stat">
+    <h3>120+</h3>
+    <p>Welfare Activities<br>சமூக சேவைகள்</p>
+  </div>
+</div>
 
-  <div class="soft-box">
+<section id="about">
+  <div class="section-title">
+    <h2>About Our Trust | எங்களை பற்றி</h2>
+    <p>Serving society through education, employment and humanitarian activities.</p>
+  </div>
+
+  <div class="about-box">
     <p>
-      ரவி அனிதா கல்வி அறக்கட்டளை தேனி மாவட்டம் மற்றும் சுற்றுப்புற பகுதிகளில்
-      கல்வி உதவி, வேலைவாய்ப்பு வழிகாட்டுதல், சமூக நல சேவை, இரத்த தான முகாம்
-      போன்ற பணிகளில் ஈடுபட்டு வருகிறது.
+      Ravi Anitha Educational Trust is a service-oriented organization working for
+      education, employment, social welfare, blood donation and community development.
+      The trust focuses on creating opportunities for rural youth, students, women
+      and underprivileged families.
     </p>
     <br>
     <p>
-      Our main aim is to connect deserving people with opportunities and create positive change in society.
+      எங்கள் அறக்கட்டளையின் நோக்கம் கல்வி, வேலைவாய்ப்பு மற்றும் சமூக சேவையின் மூலம்
+      மக்களின் வாழ்க்கையில் நல்ல மாற்றத்தை உருவாக்குவது.
     </p>
+
+    <div class="founders">
+      <div class="founder-card">
+        <h3>Founder</h3>
+        <h2>Mr. K. Ravi</h2>
+        <p>
+          Founder of Ravi Anitha Educational Trust. He works with a vision to create
+          better opportunities for youth, students and families through social service.
+        </p>
+      </div>
+
+      <div class="founder-card">
+        <h3>Chairperson</h3>
+        <h2>Mrs. Anitha Ravi</h2>
+        <p>
+          Chairperson of the trust. She actively supports education, women empowerment,
+          job guidance and community welfare activities.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="services">
-  <h2>Our Services | எங்கள் சேவைகள்</h2>
+  <div class="section-title">
+    <h2>Our Services | எங்கள் சேவைகள்</h2>
+    <p>We support people through practical and meaningful service activities.</p>
+  </div>
 
   <div class="cards">
     <div class="card">
-      <h3>🎓 Education Support</h3>
-      <p>Students guidance, awareness and educational support.</p>
+      <div class="icon">🎓</div>
+      <h3>Education Support</h3>
+      <p>Student guidance, awareness programs and educational assistance.</p>
     </div>
 
     <div class="card">
-      <h3>💼 Job Opportunities</h3>
-      <p>Connecting job seekers with private companies and local employers.</p>
+      <div class="icon">💼</div>
+      <h3>Job Opportunities</h3>
+      <p>Helping job seekers connect with companies and employment openings.</p>
+    </div>
+
+    <div class="card" id="blood">
+      <div class="icon">🩸</div>
+      <h3>Blood Donation</h3>
+      <p>Organising blood donation campaigns and emergency donor support.</p>
     </div>
 
     <div class="card">
-      <h3>🩸 Blood Donation</h3>
-      <p>Organising blood donation campaigns and donor network.</p>
+      <div class="icon">🤝</div>
+      <h3>Social Welfare</h3>
+      <p>Community development, awareness programs and public welfare service.</p>
     </div>
 
     <div class="card">
-      <h3>🤝 Social Welfare</h3>
-      <p>Community development and humanitarian service activities.</p>
+      <div class="icon">👩‍🎓</div>
+      <h3>Women Empowerment</h3>
+      <p>Supporting women through guidance, skill development and opportunities.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🧑‍🏭</div>
+      <h3>Skill Development</h3>
+      <p>Helping youth improve employability through training and placement support.</p>
     </div>
   </div>
 </section>
 
-<section id="jobs">
-  <h2>Apply Job | வேலைக்கு விண்ணப்பிக்க</h2>
+<section id="activities">
+  <div class="section-title">
+    <h2>Recent Activities | சமீபத்திய நிகழ்வுகள்</h2>
+    <p>Our trust continues to conduct useful activities for society.</p>
+  </div>
 
-  <p class="soft-box">
-    பழுத்த இளைஞர்கள் மற்றும் இளம்பெண்களுக்கு தகுதிக்கேற்ற வேலை வாய்ப்புகள் வழங்க உதவுகிறோம்.
-    கீழே உள்ள படிவத்தை நிரப்பவும்.
-  </p>
+  <div class="activity-grid">
+    <div class="activity">
+      <div class="activity-img">💼</div>
+      <div class="activity-content">
+        <h3>Job Fair</h3>
+        <p>Connecting companies with deserving youth and job seekers.</p>
+      </div>
+    </div>
 
-  <form onsubmit="submitJob(event)">
-    <label>Full Name | பெயர்</label>
-    <input type="text" id="name" required>
+    <div class="activity">
+      <div class="activity-img">🩸</div>
+      <div class="activity-content">
+        <h3>Blood Donation Camp</h3>
+        <p>Creating a strong blood donor network in Theni District.</p>
+      </div>
+    </div>
 
-    <label>Mobile Number | கைபேசி எண்</label>
-    <input type="tel" id="phone" required>
+    <div class="activity">
+      <div class="activity-img">🎓</div>
+      <div class="activity-content">
+        <h3>Education Guidance</h3>
+        <p>Guidance and support for students to build a better future.</p>
+      </div>
+    </div>
 
-    <label>Gender | பாலினம்</label>
-    <select id="gender" required>
-      <option value="">Select</option>
-      <option>Male</option>
-      <option>Female</option>
-      <option>Other</option>
-    </select>
+    <div class="activity">
+      <div class="activity-img">🌱</div>
+      <div class="activity-content">
+        <h3>Social Welfare</h3>
+        <p>Working for public welfare and community improvement.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <label>Age | வயது</label>
-    <input type="number" id="age" required>
+<section id="apply">
+  <div class="section-title">
+    <h2>Apply for Job | வேலைக்கு விண்ணப்பிக்க</h2>
+    <p>Fill your details. Our team will contact you for suitable job opportunities.</p>
+  </div>
 
-    <label>Qualification | கல்வித் தகுதி</label>
-    <select id="qualification" required>
-      <option value="">Select Qualification</option>
-      <option>10th</option>
-      <option>12th</option>
-      <option>ITI</option>
-      <option>Diploma</option>
-      <option>B.Sc</option>
-      <option>B.Com</option>
-      <option>BE</option>
-      <option>B.Tech</option>
-      <option>Any Degree</option>
-      <option>Other</option>
-    </select>
+  <form onsubmit="submitForm(event)">
+    <div class="form-grid">
+      <div>
+        <label>Full Name | பெயர்</label>
+        <input type="text" id="name" required>
+      </div>
 
-    <label>Job Preferred | விரும்பும் வேலை</label>
-    <select id="job" required>
-      <option value="">Select Job</option>
-      <option>Chennai</option>
-      <option>Coimbatore</option>
-      <option>Bengaluru</option>
-      <option>Tiruvallur</option>
-      <option>Thindukkal</option>
-      <option>Theni</option>
-      <option>Any Location</option>
-    </select>
+      <div>
+        <label>Mobile Number | கைபேசி எண்</label>
+        <input type="tel" required>
+      </div>
 
-    <label>Experience | அனுபவம்</label>
-    <select id="experience">
-      <option>Fresher</option>
-      <option>1 Year</option>
-      <option>2 Years</option>
-      <option>3+ Years</option>
-    </select>
+      <div>
+        <label>Gender | பாலினம்</label>
+        <select required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-    <label>Address | முகவரி</label>
-    <textarea id="address" rows="3" required></textarea>
+      <div>
+        <label>Age | வயது</label>
+        <input type="number" required>
+      </div>
 
-    <label>Remarks | குறிப்புகள்</label>
-    <textarea id="remarks" rows="3"></textarea>
+      <div>
+        <label>Qualification | கல்வித் தகுதி</label>
+        <select required>
+          <option value="">Select Qualification</option>
+          <option>10th</option>
+          <option>12th</option>
+          <option>ITI</option>
+          <option>Diploma</option>
+          <option>B.Sc</option>
+          <option>B.Com</option>
+          <option>BE</option>
+          <option>B.Tech</option>
+          <option>Any Degree</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-    <button type="submit">Submit Application | விண்ணப்பிக்க</button>
+      <div>
+        <label>Preferred Job Location</label>
+        <select required>
+          <option value="">Select Location</option>
+          <option>Theni</option>
+          <option>Dindigul</option>
+          <option>Madurai</option>
+          <option>Chennai</option>
+          <option>Coimbatore</option>
+          <option>Bengaluru</option>
+          <option>Any Location</option>
+        </select>
+      </div>
 
-    <p id="successMsg" style="color:green;text-align:center;font-weight:800;margin-top:15px;"></p>
+      <div>
+        <label>Experience</label>
+        <select>
+          <option>Fresher</option>
+          <option>1 Year</option>
+          <option>2 Years</option>
+          <option>3+ Years</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Job Type</label>
+        <select>
+          <option>Any Suitable Job</option>
+          <option>Office Work</option>
+          <option>Factory Work</option>
+          <option>Marketing</option>
+          <option>Telecalling</option>
+          <option>Technical Job</option>
+        </select>
+      </div>
+
+      <div class="full">
+        <label>Address | முகவரி</label>
+        <textarea required></textarea>
+      </div>
+
+      <div class="full">
+        <label>Remarks | குறிப்புகள்</label>
+        <textarea></textarea>
+      </div>
+    </div>
+
+    <br>
+    <button class="btn" type="submit">Submit Application | விண்ணப்பிக்க</button>
+    <p id="msg" style="margin-top:15px;color:green;font-weight:800;text-align:center;"></p>
   </form>
 </section>
 
 <section id="contact">
-  <h2>Contact Us | தொடர்புக்கு</h2>
+  <div class="section-title">
+    <h2>Contact Us | தொடர்புக்கு</h2>
+  </div>
 
-  <div class="contact">
-    <p><b>ரவி அனிதா கல்வி அறக்கட்டளை</b></p>
-    <p>கண்டமனூர், தேனி மாவட்டம்</p>
-    <p><b>Email:</b> ranithaeducationaltrust@gmail.com</p>
-    <p><b>Phone:</b> 98410 62271 / 84289 43415</p>
+  <div class="contact-box">
+    <div>
+      <h3>Address</h3>
+      <p>Kandamanur, Theni District,<br>Tamil Nadu - 625517</p>
+    </div>
+
+    <div>
+      <h3>Phone</h3>
+      <p>98410 62271<br>84289 43415</p>
+    </div>
+
+    <div>
+      <h3>Email</h3>
+      <p>ranithaeducationaltrust@gmail.com</p>
+    </div>
+
+    <div>
+      <h3>Service Areas</h3>
+      <p>Education • Employment • Blood Donation • Social Welfare</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Ravi Anitha Educational Trust</p>
-  <p>கல்வி • வேலைவாய்ப்பு • சமூக சேவை</p>
+  <p>© 2026 Ravi Anitha Educational Trust. All Rights Reserved.</p>
+  <p>ஒன்றிணைந்து சேவை செய்வோம் • உயிர்களை காப்பாற்றுவோம்</p>
 </footer>
 
+<a class="whatsapp" href="https://wa.me/919841062271" target="_blank">WhatsApp</a>
+
 <script>
-  function submitJob(event){
-    event.preventDefault();
-
-    let name = document.getElementById("name").value;
-
-    document.getElementById("successMsg").innerText =
-      "Thank you " + name + "! Your job application has been submitted. நன்றி!";
-
-    event.target.reset();
-  }
+function submitForm(event){
+  event.preventDefault();
+  let name = document.getElementById("name").value;
+  document.getElementById("msg").innerText =
+  "Thank you " + name + "! Your application has been submitted. நன்றி!";
+  event.target.reset();
+}
 </script>
 
 </body>
 </html>
+```
+
+This will look better even without adding photos. For saving form data, use **Google Form or Formspree** later.
