@@ -26,21 +26,16 @@ body{
 }
 
 header{
-  background:white;
-  padding:18px 40px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  box-shadow:0 3px 15px rgba(0,0,0,0.08);
-  position:sticky;
-  top:0;
-  z-index:100;
+   display:flex;
+   align-items:center;
+   justify-content:space-between;
+   padding:15px 20px;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
+   display:flex;
+   align-items:center;
+   gap:12px;
 }
 
 .logo-circle{
@@ -415,14 +410,15 @@ footer{
 </div>
 
 <header>
-  <div class="logo">
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="logo">
     <img src="logo.png" alt="Trust Logo" style="width:55px;height:55px;border-radius:50%;object-fit:cover;">
     <div>
       <h1>RAVI ANITHA</h1>
       <span>EDUCATIONAL TRUST</span>
     </div>
   </div>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  
   <nav id="navMenu">
     <a href="#home">Home</a>
     <a href="#about">About Us</a>
