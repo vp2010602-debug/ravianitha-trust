@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravi Anitha Kalvi Arakattalai</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Noto Sans Tamil','Poppins',sans-serif;
+    }
+
+    body{
+      background:#f8ffff;
+      color:#163f35;
+      line-height:1.7;
+    }
+
+    header{
+      background:#ffffff;
+      text-align:center;
+      padding:10px;
+    }
+
+    .banner{
+      width:100%;
+      max-height:420px;
+      object-fit:cover;
+      border-radius:0 0 25px 25px;
+    }
+
+    nav{
+      background:#e7fbff;
+      text-align:center;
+      padding:14px;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#0d5c50;
+      margin:8px 12px;
+      font-weight:800;
+      display:inline-block;
+    }
+
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:45px 20px;
+    }
+
+    h1,h2{
+      text-align:center;
+      color:#0d5c50;
+      margin-bottom:18px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#e8fbff,#fff7e8);
+      text-align:center;
+      padding:55px 20px;
+      border-radius:25px;
+      margin-top:25px;
+    }
+
+    .hero h1{
+      font-size:34px;
+    }
+
+    .hero p{
+      font-size:18px;
+      max-width:850px;
+      margin:auto;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#ff9f1c;
+      color:white;
+      padding:13px 28px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:800;
+      margin-top:20px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:22px;
+      margin-top:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 5px 18px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+
+    .card h3{
+      color:#0d5c50;
+      margin-bottom:10px;
+    }
+
+    .soft-box{
+      background:#eefcff;
+      padding:25px;
+      border-radius:20px;
+      margin-top:20px;
+      border-left:6px solid #4ecdc4;
+    }
+
+    form{
+      background:white;
+      padding:28px;
+      border-radius:22px;
+      max-width:750px;
+      margin:auto;
+      box-shadow:0 5px 18px rgba(0,0,0,0.08);
+    }
+
+    label{
+      font-weight:800;
+      color:#16443b;
+    }
+
+    input,select,textarea{
+      width:100%;
+      padding:13px;
+      margin:8px 0 16px;
+      border:1px solid #cce7e4;
+      border-radius:12px;
+      font-size:15px;
+      background:#fbffff;
+    }
+
+    button{
+      width:100%;
+      background:#0d5c50;
+      color:white;
+      border:none;
+      padding:14px;
+      border-radius:30px;
+      font-size:17px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .contact{
+      background:#fff7e8;
+      text-align:center;
+      padding:28px;
+      border-radius:20px;
+      font-size:18px;
+    }
+
+    footer{
+      background:#e7fbff;
+      text-align:center;
+      padding:25px;
+      margin-top:30px;
+      color:#0d5c50;
+      font-weight:700;
+    }
+
+    @media(max-width:600px){
+      .hero h1{
+        font-size:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="banner.jpeg" class="banner" alt="Ravi Anitha Kalvi Arakattalai">
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#jobs">Apply Job</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <div class="hero">
+    <h1>ரவி அனிதா கல்வி அறக்கட்டளை</h1>
+    <p>
+      கல்வி, வேலைவாய்ப்பு, சமூக நலன் மற்றும் மனிதநேய சேவைகளுக்காக செயல்படும் அறக்கட்டளை.
+    </p>
+    <p>
+      Ravi Anitha Educational Trust supports youth, students, women and job seekers through guidance, job opportunities and social service activities.
+    </p>
+    <a href="#jobs" class="btn">வேலைக்கு விண்ணப்பிக்க | Apply Job</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Our Trust | எங்களை பற்றி</h2>
+
+  <div class="soft-box">
+    <p>
+      ரவி அனிதா கல்வி அறக்கட்டளை தேனி மாவட்டம் மற்றும் சுற்றுப்புற பகுதிகளில்
+      கல்வி உதவி, வேலைவாய்ப்பு வழிகாட்டுதல், சமூக நல சேவை, இரத்த தான முகாம்
+      போன்ற பணிகளில் ஈடுபட்டு வருகிறது.
+    </p>
+    <br>
+    <p>
+      Our main aim is to connect deserving people with opportunities and create positive change in society.
+    </p>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services | எங்கள் சேவைகள்</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>🎓 Education Support</h3>
+      <p>Students guidance, awareness and educational support.</p>
+    </div>
+
+    <div class="card">
+      <h3>💼 Job Opportunities</h3>
+      <p>Connecting job seekers with private companies and local employers.</p>
+    </div>
+
+    <div class="card">
+      <h3>🩸 Blood Donation</h3>
+      <p>Organising blood donation campaigns and donor network.</p>
+    </div>
+
+    <div class="card">
+      <h3>🤝 Social Welfare</h3>
+      <p>Community development and humanitarian service activities.</p>
+    </div>
+  </div>
+</section>
+
+<section id="jobs">
+  <h2>Apply Job | வேலைக்கு விண்ணப்பிக்க</h2>
+
+  <p class="soft-box">
+    பழுத்த இளைஞர்கள் மற்றும் இளம்பெண்களுக்கு தகுதிக்கேற்ற வேலை வாய்ப்புகள் வழங்க உதவுகிறோம்.
+    கீழே உள்ள படிவத்தை நிரப்பவும்.
+  </p>
+
+  <form onsubmit="submitJob(event)">
+    <label>Full Name | பெயர்</label>
+    <input type="text" id="name" required>
+
+    <label>Mobile Number | கைபேசி எண்</label>
+    <input type="tel" id="phone" required>
+
+    <label>Gender | பாலினம்</label>
+    <select id="gender" required>
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>Age | வயது</label>
+    <input type="number" id="age" required>
+
+    <label>Qualification | கல்வித் தகுதி</label>
+    <select id="qualification" required>
+      <option value="">Select Qualification</option>
+      <option>10th</option>
+      <option>12th</option>
+      <option>ITI</option>
+      <option>Diploma</option>
+      <option>B.Sc</option>
+      <option>B.Com</option>
+      <option>BE</option>
+      <option>B.Tech</option>
+      <option>Any Degree</option>
+      <option>Other</option>
+    </select>
+
+    <label>Job Preferred | விரும்பும் வேலை</label>
+    <select id="job" required>
+      <option value="">Select Job</option>
+      <option>Chennai</option>
+      <option>Coimbatore</option>
+      <option>Bengaluru</option>
+      <option>Tiruvallur</option>
+      <option>Thindukkal</option>
+      <option>Theni</option>
+      <option>Any Location</option>
+    </select>
+
+    <label>Experience | அனுபவம்</label>
+    <select id="experience">
+      <option>Fresher</option>
+      <option>1 Year</option>
+      <option>2 Years</option>
+      <option>3+ Years</option>
+    </select>
+
+    <label>Address | முகவரி</label>
+    <textarea id="address" rows="3" required></textarea>
+
+    <label>Remarks | குறிப்புகள்</label>
+    <textarea id="remarks" rows="3"></textarea>
+
+    <button type="submit">Submit Application | விண்ணப்பிக்க</button>
+
+    <p id="successMsg" style="color:green;text-align:center;font-weight:800;margin-top:15px;"></p>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Us | தொடர்புக்கு</h2>
+
+  <div class="contact">
+    <p><b>ரவி அனிதா கல்வி அறக்கட்டளை</b></p>
+    <p>கண்டமனூர், தேனி மாவட்டம்</p>
+    <p><b>Email:</b> ranithaeducationaltrust@gmail.com</p>
+    <p><b>Phone:</b> 98410 62271 / 84289 43415</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ravi Anitha Educational Trust</p>
+  <p>கல்வி • வேலைவாய்ப்பு • சமூக சேவை</p>
+</footer>
+
+<script>
+  function submitJob(event){
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    document.getElementById("successMsg").innerText =
+      "Thank you " + name + "! Your job application has been submitted. நன்றி!";
+
+    event.target.reset();
+  }
+</script>
+
+</body>
+</html>
