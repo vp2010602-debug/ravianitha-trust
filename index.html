@@ -8,16 +8,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --green:#064635;
+  --green-dark:#043327;
+  --green-soft:#eaf5ef;
+  --gold:#ffbf1f;
+  --gold-soft:#fff5d6;
+  --red:#e63946;
+  --white:#ffffff;
+  --text:#183b34;
+  --muted:#5d6f68;
+  --bg:#fffaf2;
+  --shadow:0 10px 30px rgba(0,0,0,0.10);
+}
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:'Poppins','Noto Sans Tamil',sans-serif;
-  background:#fffaf2;
-  color:#183b34;
+  background:var(--bg);
+  color:var(--text);
   line-height:1.7;
 }
 
@@ -25,138 +43,172 @@ body{
   display:none;
 }
 
+/* HEADER */
 header{
-   display:flex;
-   align-items:center;
-   justify-content:space-between;
-   padding:15px 20px;
+  background:var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 7%;
+  position:sticky;
+  top:0;
+  z-index:999;
+  box-shadow:0 4px 18px rgba(0,0,0,0.08);
 }
 
 .logo{
-   display:flex;
-   align-items:center;
-   gap:12px;
-}
-
-.logo-circle{
-  width:60px;
-  height:60px;
-  background:#ffcc33;
-  color:#064635;
-  border-radius:50%;
   display:flex;
   align-items:center;
-  justify-content:center;
-  font-weight:800;
-  font-size:22px;
+  gap:14px;
+}
+
+.logo img{
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  object-fit:cover;
 }
 
 .logo h1{
-  font-size:18px;
-  color:#064635;
-  line-height:1.2;
+  font-size:28px;
+  color:var(--green);
+  line-height:1.1;
+  letter-spacing:1px;
 }
 
 .logo span{
-  font-size:13px;
-  letter-spacing:3px;
+  font-size:14px;
+  letter-spacing:4px;
   color:#555;
+  font-weight:500;
+}
+
+.menu-btn{
+  display:none;
+  background:var(--green);
+  color:white;
+  border:none;
+  font-size:26px;
+  padding:6px 13px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:6px;
 }
 
 nav a{
   text-decoration:none;
-  color:#183b34;
-  margin:0 10px;
-  font-weight:600;
+  color:var(--text);
+  padding:9px 12px;
+  font-weight:700;
+  border-radius:8px;
+  transition:0.3s;
 }
 
 nav a:hover{
-  color:#e63946;
+  background:var(--green-soft);
+  color:var(--green);
 }
 
+/* BUTTONS */
 .btn{
-  background:#064635;
+  background:var(--green);
   color:white;
-  padding:12px 22px;
-  border-radius:8px;
+  padding:13px 24px;
+  border-radius:12px;
   text-decoration:none;
-  display:inline-block;
-  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-weight:800;
   border:none;
   cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }
 
-.btn-red{
-  background:#e63946;
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .btn-yellow{
-  background:#ffbf1f;
-  color:#183b34;
+  background:var(--gold);
+  color:var(--text);
 }
 
+.btn-green{
+  background:var(--green);
+}
+
+/* HERO */
 .hero{
-  min-height:560px;
+  min-height:610px;
   background:
-  linear-gradient(90deg,rgba(6,70,53,0.92),rgba(6,70,53,0.65)),
-  url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+  linear-gradient(90deg,rgba(6,70,53,0.94),rgba(6,70,53,0.72)),
+  url("event1.jpeg");
   background-size:cover;
   background-position:center;
   color:white;
   display:flex;
   align-items:center;
-  padding:70px 8%;
+  padding:80px 8%;
 }
 
 .hero-content{
-  max-width:760px;
+  max-width:780px;
 }
 
 .badge{
-  background:#ffbf1f;
-  color:#183b34;
+  background:var(--gold);
+  color:var(--text);
   display:inline-block;
-  padding:8px 18px;
-  border-radius:30px;
+  padding:10px 22px;
+  border-radius:40px;
   font-weight:800;
-  margin-bottom:18px;
+  margin-bottom:22px;
 }
 
 .hero h2{
-  font-size:50px;
-  line-height:1.15;
-  margin-bottom:18px;
+  font-size:54px;
+  line-height:1.14;
+  margin-bottom:20px;
 }
 
 .hero p{
-  font-size:18px;
-  margin-bottom:28px;
+  font-size:19px;
+  margin-bottom:30px;
+  max-width:720px;
 }
 
 .hero-buttons{
   display:flex;
-  gap:15px;
+  gap:16px;
   flex-wrap:wrap;
 }
 
+/* STATS */
 .stats{
   max-width:1150px;
-  margin:-50px auto 40px;
-  background:#064635;
+  margin:-55px auto 30px;
+  background:linear-gradient(135deg,var(--green),#087056);
   color:white;
-  border-radius:18px;
+  border-radius:22px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  padding:30px;
+  gap:15px;
+  padding:32px;
   position:relative;
   z-index:5;
-  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+  box-shadow:var(--shadow);
 }
 
 .stat{
   text-align:center;
-  border-right:1px solid rgba(255,255,255,0.25);
+  border-right:1px solid rgba(255,255,255,0.22);
 }
 
 .stat:last-child{
@@ -164,14 +216,16 @@ nav a:hover{
 }
 
 .stat h3{
-  font-size:34px;
-  color:#ffbf1f;
+  font-size:36px;
+  color:var(--gold);
+  line-height:1.2;
 }
 
+/* COMMON */
 section{
   max-width:1150px;
   margin:auto;
-  padding:55px 25px;
+  padding:60px 25px;
 }
 
 .section-title{
@@ -180,21 +234,35 @@ section{
 }
 
 .section-title h2{
-  font-size:34px;
-  color:#064635;
+  font-size:36px;
+  color:var(--green);
+  margin-bottom:8px;
 }
 
 .section-title p{
-  max-width:800px;
+  max-width:820px;
   margin:auto;
-  color:#555;
+  color:var(--muted);
 }
 
+/* ABOUT */
 .about-box{
   background:white;
-  padding:35px;
+  padding:38px;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+
+.parents-photo{
+  text-align:center;
+  margin:34px 0;
+}
+
+.parents-photo img{
+  width:380px;
+  max-width:100%;
   border-radius:22px;
-  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  box-shadow:0 10px 28px rgba(0,0,0,0.16);
 }
 
 .founders{
@@ -205,28 +273,33 @@ section{
 }
 
 .founder-card{
-  background:#fff6df;
-  padding:28px;
+  background:var(--gold-soft);
+  padding:30px;
   border-radius:20px;
-  border-left:6px solid #ffbf1f;
+  border-left:6px solid var(--gold);
 }
 
 .founder-card h3{
-  color:#064635;
+  color:var(--green);
   margin-bottom:5px;
 }
 
+.founder-card h2{
+  margin-bottom:10px;
+}
+
+/* CARDS */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:22px;
 }
 
 .card{
   background:white;
-  padding:28px;
-  border-radius:20px;
-  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  padding:30px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
   transition:0.3s;
 }
 
@@ -235,15 +308,16 @@ section{
 }
 
 .icon{
-  font-size:38px;
+  font-size:40px;
   margin-bottom:12px;
 }
 
 .card h3{
-  color:#064635;
+  color:var(--green);
   margin-bottom:10px;
 }
 
+/* ACTIVITIES */
 .activity-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -252,14 +326,14 @@ section{
 
 .activity{
   background:white;
-  border-radius:18px;
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  box-shadow:var(--shadow);
 }
 
 .activity-img{
   height:190px;
-  background:#d8f3dc;
+  background:var(--green-soft);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -267,61 +341,72 @@ section{
 }
 
 .activity-content{
-  padding:22px;
+  padding:24px;
 }
 
-form{
-  background:white;
-  padding:35px;
+/* APPLY / DONATE */
+.apply-box,
+.donate-box{
+  background:linear-gradient(135deg,var(--green),#087056);
+  color:white;
   border-radius:24px;
-  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  padding:42px 25px;
+  text-align:center;
+  box-shadow:var(--shadow);
 }
 
-.form-grid{
+.apply-box h2,
+.donate-box h2{
+  color:white;
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.apply-box p,
+.donate-box p{
+  max-width:720px;
+  margin:0 auto 22px;
+}
+
+/* GALLERY */
+.gallery-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:18px;
 }
 
-label{
-  font-weight:700;
-  color:#064635;
-}
-
-input,select,textarea{
+.gallery-grid img{
   width:100%;
-  padding:13px;
-  margin-top:6px;
-  border:1px solid #d6ddd9;
-  border-radius:10px;
-  font-family:inherit;
-  font-size:15px;
+  height:230px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:var(--shadow);
 }
 
-textarea{
-  height:110px;
-}
-
-.full{
-  grid-column:1/-1;
-}
-
+/* CONTACT */
 .contact-box{
-  background:#064635;
+  background:var(--green);
   color:white;
   border-radius:24px;
-  padding:35px;
+  padding:38px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:25px;
+  box-shadow:var(--shadow);
 }
 
 .contact-box h3{
-  color:#ffbf1f;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+
+.contact-box a{
+  color:white;
+  text-decoration:none;
 }
 
 footer{
-  background:#043327;
+  background:var(--green-dark);
   color:white;
   text-align:center;
   padding:25px;
@@ -329,8 +414,8 @@ footer{
 
 .whatsapp{
   position:fixed;
-  right:22px;
-  bottom:22px;
+  right:20px;
+  bottom:20px;
   background:#25d366;
   color:white;
   padding:14px 20px;
@@ -338,54 +423,49 @@ footer{
   text-decoration:none;
   font-weight:800;
   box-shadow:0 5px 18px rgba(0,0,0,0.25);
+  z-index:1000;
 }
 
+/* MOBILE */
 @media(max-width:800px){
   header{
-    flex-direction:column;
-    gap:15px;
+    padding:14px 16px;
+    gap:12px;
   }
-
-  nav{
-    text-align:center;
-  }
-
-  nav a{
-    display:inline-block;
-    margin:6px;
-  }
-
-  .hero h2{
-    font-size:34px;
-  }
-
-  .topbar{
-    text-align:center;
-    justify-content:center;
-    gap:8px;
-  }
-
-  .stat{
-    border-right:none;
-  }
-  .menu-btn{
-  display:none;
-}
-
-@media(max-width:800px){
 
   .menu-btn{
     display:block;
-    background:#064635;
-    color:white;
-    border:none;
-    font-size:28px;
-    padding:6px 12px;
-    border-radius:8px;
+    flex-shrink:0;
+  }
+
+  .logo{
+    flex:1;
+    gap:10px;
+  }
+
+  .logo img{
+    width:52px;
+    height:52px;
+  }
+
+  .logo h1{
+    font-size:21px;
+  }
+
+  .logo span{
+    font-size:10px;
+    letter-spacing:2.7px;
   }
 
   nav{
     display:none;
+    position:absolute;
+    top:82px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:10px 18px 18px;
+    box-shadow:0 12px 20px rgba(0,0,0,0.12);
   }
 
   nav.active{
@@ -394,39 +474,101 @@ footer{
 
   nav a{
     display:block;
-    padding:12px;
     text-align:center;
+    padding:13px;
+    border-bottom:1px solid #eee;
   }
-}
+
+  .hero{
+    min-height:590px;
+    padding:60px 8%;
+    background-position:center;
+  }
+
+  .badge{
+    font-size:15px;
+    padding:9px 17px;
+  }
+
+  .hero h2{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .hero-buttons{
+    gap:12px;
+  }
+
+  .btn{
+    padding:12px 18px;
+  }
+
+  .stats{
+    margin:0 15px 25px;
+    grid-template-columns:1fr;
+  }
+
+  .stat{
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,0.20);
+    padding-bottom:15px;
+  }
+
+  .stat:last-child{
+    border-bottom:none;
+  }
+
+  section{
+    padding:45px 18px;
+  }
+
+  .section-title h2{
+    font-size:28px;
+  }
+
+  .about-box{
+    padding:25px;
+  }
+
+  .contact-box{
+    padding:28px;
+  }
+
+  .whatsapp{
+    right:15px;
+    bottom:15px;
+    padding:13px 17px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <div>Ravi Anitha Educational Trust | கல்வி • வேலைவாய்ப்பு • சமூக சேவை</div>
-  <div>Email: ranithaeducationaltrust@gmail.com | Phone: 98410 62271 / 84289 43415</div>
-</div>
-
 <header>
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-<div class="logo">
-    <img src="logo.png" alt="Trust Logo" style="width:55px;height:55px;border-radius:50%;object-fit:cover;">
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <div class="logo">
+    <img src="logo.png" alt="Ravi Anitha Educational Trust Logo">
     <div>
       <h1>RAVI ANITHA</h1>
       <span>EDUCATIONAL TRUST</span>
     </div>
   </div>
-  
+
   <nav id="navMenu">
     <a href="#home">Home</a>
     <a href="#about">About Us</a>
     <a href="#services">Services</a>
     <a href="#activities">Activities</a>
     <a href="#apply">Apply Job</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#donate">Support</a>
     <a href="#contact">Contact</a>
-  </nav id="navMenu">
+  </nav>
 </header>
 
 <section class="hero" id="home">
@@ -441,11 +583,9 @@ footer{
 
     <div class="hero-buttons">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSeE5XjBd5mBrV-pxUnPJvLc_9ERAREdKtJl7J2xAdCSi8-LhQ/viewform?usp=header"
-      target="_blank"
-      class="btn btn-yellow">
-      💼 Apply for Jobs
-      </a>
-      <a href="#contact" class="btn">📞 Contact Us</a>
+         target="_blank"
+         class="btn btn-yellow">💼 Apply for Jobs</a>
+      <a href="#contact" class="btn btn-green">📞 Contact Us</a>
     </div>
   </div>
 </section>
@@ -488,20 +628,13 @@ footer{
       மக்களின் வாழ்க்கையில் நல்ல மாற்றத்தை உருவாக்குவது.
     </p>
 
-    <div style="text-align:center;margin:30px 0;">
-      <img src="parents.png"
-       alt="Founder and Chairperson"
-       style="
-       width:350px;
-       max-width:100%;
-       border-radius:20px;
-       box-shadow:0 8px 25px rgba(0,0,0,0.15);
-       ">
+    <div class="parents-photo">
+      <img src="parents.png" alt="Founder and Chairperson">
     </div>
+
     <div class="founders">
       <div class="founder-card">
-      
-      <h3>Founder</h3>
+        <h3>Founder</h3>
         <h2>Mr. K. Ravi</h2>
         <p>
           Founder of Ravi Anitha Educational Trust. He works with a vision to create
@@ -510,8 +643,7 @@ footer{
       </div>
 
       <div class="founder-card">
-     
-      <h3>Chairperson</h3>
+        <h3>Chairperson</h3>
         <h2>Mrs. Anitha Ravi</h2>
         <p>
           Chairperson of the trust. She actively supports education, women empowerment,
@@ -541,7 +673,7 @@ footer{
       <p>Helping job seekers connect with companies and employment openings.</p>
     </div>
 
-    <div class="card" id="blood">
+    <div class="card">
       <div class="icon">🩸</div>
       <h3>Blood Donation</h3>
       <p>Organising blood donation campaigns and emergency donor support.</p>
@@ -609,37 +741,49 @@ footer{
 </section>
 
 <section id="apply">
-  <div class="section-title">
+  <div class="apply-box">
     <h2>Job Registration | வேலை பதிவு</h2>
     <p>
-      Click the button below to submit your job application.
+      Submit your details through our official job application form.
       All applications are reviewed by Ravi Anitha Educational Trust.
     </p>
-
-    <br>
-
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeE5XjBd5mBrV-pxUnPJvLc_9ERAREdKtJl7J2xAdCSi8-LhQ/viewform?usp=header"
        target="_blank"
-       class="btn btn-yellow">
-       Apply Now
-    </a>
+       class="btn btn-yellow">Apply Now</a>
   </div>
 </section>
+
 <section id="gallery">
   <div class="section-title">
     <h2>Photo Gallery</h2>
     <p>Trust Activities & Job Fair Events</p>
   </div>
 
-  <div class="activity-grid">
-    <img src="event1.jpeg" style="width:100%;height:220px;object-fit:cover;border-radius:15px;">
-    <img src="event2.jpeg" style="width:100%;height:220px;object-fit:cover;border-radius:15px;">
-    <img src="event3.jpeg" style="width:100%;height:220px;object-fit:cover;border-radius:15px;">
-    <img src="event4.jpeg" style="width:100%;height:220px;object-fit:cover;border-radius:15px;">
-    <img src="event5.jpeg" style="width:100%;height:220px;object-fit:cover;border-radius:15px;">
-    <img src="event6.jpeg" style="width:100%;height:220px;object-fit:cover;border-radius:15px;">
+  <div class="gallery-grid">
+    <img src="event1.jpeg" alt="Trust activity photo 1">
+    <img src="event2.jpeg" alt="Trust activity photo 2">
+    <img src="event3.jpeg" alt="Trust activity photo 3">
+    <img src="event4.jpeg" alt="Trust activity photo 4">
+    <img src="event5.jpeg" alt="Trust activity photo 5">
+    <img src="event6.jpeg" alt="Trust activity photo 6">
+    <img src="event7.jpeg" alt="Trust activity photo 7">
+    <img src="event8.jpeg" alt="Trust activity photo 8">
   </div>
 </section>
+
+<section id="donate">
+  <div class="donate-box">
+    <h2>Support Our Trust | உதவி செய்யுங்கள்</h2>
+    <p>
+      Your support helps us conduct education guidance programs, job fairs,
+      blood donation camps and social welfare activities for people in need.
+    </p>
+    <a href="https://wa.me/919841062271" target="_blank" class="btn btn-yellow">
+      Contact for Support
+    </a>
+  </div>
+</section>
+
 <section id="contact">
   <div class="section-title">
     <h2>Contact Us | தொடர்புக்கு</h2>
@@ -653,12 +797,12 @@ footer{
 
     <div>
       <h3>Phone</h3>
-      <p>98410 62271<br>84289 43415</p>
+      <p><a href="tel:9841062271">98410 62271</a><br><a href="tel:8428943415">84289 43415</a></p>
     </div>
 
     <div>
       <h3>Email</h3>
-      <p>ranithaeducationaltrust@gmail.com</p>
+      <p><a href="mailto:ranithaeducationaltrust@gmail.com">ranithaeducationaltrust@gmail.com</a></p>
     </div>
 
     <div>
@@ -676,18 +820,10 @@ footer{
 <a class="whatsapp" href="https://wa.me/919841062271" target="_blank">WhatsApp</a>
 
 <script>
-function submitForm(event){
-  event.preventDefault();
-  let name = document.getElementById("name").value;
-  document.getElementById("msg").innerText =
-  "Thank you " + name + "! Your application has been submitted. நன்றி!";
-  event.target.reset();
-}
-</script>
-<script>
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
